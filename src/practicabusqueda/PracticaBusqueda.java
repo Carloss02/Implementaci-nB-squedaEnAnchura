@@ -15,8 +15,20 @@ public class PracticaBusqueda {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        Laberinto l = new Laberinto();
+  
+        
+        Laberinto laberinto = new Laberinto();
+        Node initial = new Node();
+        initial.setState((short)-2);
+        initial.setX(2);
+        initial.setY(2);
+        short goalState = -3;
+        //System.out.println("VALOR 3,3 " + l.getValor(3,3));
+        Problem problem = new Problem(laberinto, initial, goalState);
+        
+        BreadthFirstSearch bfs = new BreadthFirstSearch();
+        Node solution = bfs.breadthFirstSearch(problem);
+        System.out.println("[" + solution.getX() + "," + solution.getY() + "] = " + solution.getState());
     }
     
 }
