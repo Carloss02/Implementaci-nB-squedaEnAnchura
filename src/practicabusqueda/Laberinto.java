@@ -27,10 +27,10 @@ public class Laberinto {
         for (int i = 0; i< largo + 2; i++) {
             for (int j = 0; j < alto + 2; j++) {
                 laberinto[i][j] = estado;
-                System.out.print("{" + i + "," + j + "] = " + laberinto[i][j] + " | ");
+                //System.out.print("{" + i + "," + j + "] = " + laberinto[i][j] + " | ");
                 estado++;
             }
-            System.out.println();
+            //System.out.println();
         }
         
         for (int i = 0; i < alto + 2; i++) {
@@ -54,7 +54,7 @@ public class Laberinto {
         
         for (int i = 0; i< largo + 2; i++) {
             for (int j = 0; j < alto + 2; j++) {
-                System.out.print( laberinto[i][j] + " | ");
+                //System.out.print( laberinto[i][j] + " | ");
             }
             System.out.println();
         }
